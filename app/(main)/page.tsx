@@ -20,12 +20,14 @@ export default async function Home() {
     create: {
       name: session.user.name,
       userId: session.user.id,
+      walletAddress: "Dc6ZfzPPgimv4yJr6SHywtwU9ZPd8VSB9Zg3UXkma1pa",
     },
     where: {
       userId: session.user.id,
     },
     update: {
       name: session.user.name,
+      walletAddress: "Dc6ZfzPPgimv4yJr6SHywtwU9ZPd8VSB9Zg3UXkma1pa",
     },
   });
 

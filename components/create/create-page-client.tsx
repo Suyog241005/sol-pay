@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CreatePromptForm } from "./create-prompt-form";
 import { CreateArticleForm } from "./create-article-form";
-import { ConnectedWallet } from "@/components/connected-wallet";
 
 export function CreatePageClient() {
   const [activeTab, setActiveTab] = useState("prompt");
