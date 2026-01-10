@@ -21,9 +21,6 @@ interface ContentItem {
   id: string;
   title: string;
   type: "Article" | "Prompt";
-  price: number;
-  purchases: number;
-  earned: number;
   status: "Published" | "Draft";
   created: string;
 }
@@ -33,9 +30,6 @@ interface ContentListProps {
     id: string;
     title: string;
     type: string;
-    price: number;
-    purchases: number;
-    earned: number;
     status: string;
     created: string;
   }[];
@@ -75,9 +69,6 @@ export function ContentList({ items }: ContentListProps) {
             <TableRow>
               <TableHead>Title</TableHead>
               <TableHead>Type</TableHead>
-              <TableHead>Price</TableHead>
-              <TableHead>Purchases</TableHead>
-              <TableHead>Earned</TableHead>
               <TableHead>Status</TableHead>
               <TableHead>Created</TableHead>
               <TableHead className="w-[100px]">Actions</TableHead>
@@ -93,11 +84,6 @@ export function ContentList({ items }: ContentListProps) {
                   <Badge variant={item.type === "Article" ? "default" : "secondary"}>
                     {item.type}
                   </Badge>
-                </TableCell>
-                <TableCell>{item.price.toFixed(4)} SOL</TableCell>
-                <TableCell>{item.purchases}</TableCell>
-                <TableCell className="font-mono">
-                  {item.earned.toFixed(4)} SOL
                 </TableCell>
                 <TableCell>
                   <Badge variant={item.status === "Published" ? "default" : "secondary"}>

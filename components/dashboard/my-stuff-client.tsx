@@ -6,7 +6,7 @@ import { StatsOverview } from "./stats-overview";
 import { ContentList } from "./content-list";
 import { useWallet } from "@solana/wallet-adapter-react";
 
-export function MyStuffClient() {
+export function MyStuffClient({ articles }: { articles: any[] }) {
   const { publicKey, connected } = useWallet();
   const [activeTab, setActiveTab] = useState("articles");
 
@@ -18,37 +18,11 @@ export function MyStuffClient() {
     drafts: 2,
   };
 
-  const articles = [
-    {
-      id: "1",
-      title: "Next.js + Solana Integration Guide",
-      type: "Article",
-      price: 0.02,
-      purchases: 5,
-      earned: 0.1,
-      status: "Published",
-      created: "2024-01-09",
-    },
-    {
-      id: "2",
-      title: "Perfect Hackathon Pitch Template",
-      type: "Article",
-      price: 0.015,
-      purchases: 3,
-      earned: 0.045,
-      status: "Published",
-      created: "2024-01-08",
-    },
-  ];
-
   const prompts = [
     {
       id: "3",
       title: "Write a Perfect Hackathon Pitch",
       type: "Prompt",
-      price: 0.01,
-      purchases: 0,
-      earned: 0,
       status: "Published",
       created: "2024-01-07",
     },
@@ -59,9 +33,6 @@ export function MyStuffClient() {
       id: "4",
       title: "GSoC Proposal Checklist",
       type: "Article",
-      price: 0.025,
-      purchases: 0,
-      earned: 0,
       status: "Draft",
       created: "2024-01-06",
     },

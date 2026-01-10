@@ -48,7 +48,7 @@ export function StatsOverview({ stats }: StatsOverviewProps) {
                 </p>
               </div>
               <div className="h-8 w-8 bg-muted rounded-full flex items-center justify-center">
-                {index === 0 && "₿"}
+                {index === 0 && "$"}
                 {index === 1 && "📊"}
                 {index === 2 && "📝"}
                 {index === 3 && "📄"}
