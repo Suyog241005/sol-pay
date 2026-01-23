@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 🚀 SolPay — A Decentralized Medium with On-Chain Subscriptions
 
-## Getting Started
+### 🧠 Problem
 
-First, run the development server:
+Platforms like **Medium, Substack, and Gumroad** control creator monetization:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+* Platform fees eat into earnings
+* Subscription logic is opaque and centralized
+* Creators don’t truly own their audience or revenue
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Web3 promised creator ownership — but **most solutions are too complex, NFT-heavy, or unusable**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 💡 Solution
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**SolPay is a Medium-like publishing platform where subscriptions and content access are enforced directly on-chain using Solana.**
 
-## Learn More
+No NFTs.
+No platform custody.
+No subscriptions trapped inside Web2 databases.
 
-To learn more about Next.js, take a look at the following resources:
+Just wallets, subscriptions, and content — transparently.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🧩 How SolPay Works
 
-## Deploy on Vercel
+#### For Creators
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Write and publish articles (like Medium)
+* Set:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  * **Free posts**
+  * **Paid posts**
+  * **Subscriber-only content**
+* Define a **monthly subscription price in SOL**
+* Share a public profile link
+
+#### For Readers
+
+* Connect a Solana wallet
+* Subscribe once (on-chain)
+* Instantly unlock all subscriber-only content
+* Access persists as long as subscription is valid
+
+---
+
+### 🔗 On-Chain Subscription Model
+
+* Subscription status stored on Solana (Program Account)
+* Time-based
